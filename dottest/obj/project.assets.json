@@ -670,11 +670,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/paiconor/Desktop/newCode/dllimportTest/dottest/dottest.csproj",
+      "projectUniqueName": "/Users/paiconor/GitHub/DotNetCoreDllImportTest/dottest/dottest.csproj",
       "projectName": "dottest",
-      "projectPath": "/Users/paiconor/Desktop/newCode/dllimportTest/dottest/dottest.csproj",
+      "projectPath": "/Users/paiconor/GitHub/DotNetCoreDllImportTest/dottest/dottest.csproj",
       "packagesPath": "/Users/paiconor/.nuget/packages/",
-      "outputPath": "/Users/paiconor/Desktop/newCode/dllimportTest/dottest/obj/",
+      "outputPath": "/Users/paiconor/GitHub/DotNetCoreDllImportTest/dottest/obj/",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
