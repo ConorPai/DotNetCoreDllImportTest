@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Runtime.InteropServices;
+using System.Text;
 
 namespace MapZone.Core
 {
@@ -61,6 +62,51 @@ namespace MapZone.Core
         {
             mzEncryptUtil_decrypt(src, src.Length, secretcode);
             return src;
+        }
+
+        /// <summary>
+        /// 生成随机密码表
+        /// </summary>
+        static public string createkey()
+        {
+            StringBuilder str = new StringBuilder();
+
+            //添加小写字母
+            for (int i = 0; i < 26; i++)
+            {
+                str.Append((char)(97 + i));
+            }
+            //添加大写字母
+            for (int i = 0; i < 26; i++)
+            {
+                str.Append((char)(65 + i));
+            }
+            //添加数字
+            for (int i = 0; i < 10; i++)
+            {
+                str.Append((char)(48 + i));
+            }
+
+            StringBuilder sbResult = new StringBuilder();
+
+            Random rd = new Random();
+            char[] seed = str.ToString().ToCharArray();
+            char clast = seed[0];
+            for (int i = 0; i < 1024; i++)
+            {
+                //随机获取
+                char cnew = seed[rd.Next(62)];
+
+                //保证和上一个不一致
+                while (cnew == clast)
+                {
+                    cnew = seed[rd.Next(62)];
+                }
+                sbResult.Append(cnew);
+                clast = cnew;
+            }
+
+            return sbResult.ToString();
         }
     }
 }
