@@ -9,6 +9,7 @@ namespace MapZone.Core
     /// </summary>
     public class mzEncryptUtil
     {
+        //dylib是MacOS下的动态链接库扩展名，Linux下是so，Windows下是dll
         [DllImport("libc.dylib", CharSet = CharSet.Auto, CallingConvention = CallingConvention.Cdecl)]
         private static extern void mzEncryptUtil_encrypt_default(byte[] src, int nLength);
         /// <summary>
@@ -22,6 +23,7 @@ namespace MapZone.Core
             return src;
         }
 
+        //dylib是MacOS下的动态链接库扩展名，Linux下是so，Windows下是dll
         [DllImport("libc.dylib", CharSet = CharSet.Auto, CallingConvention = CallingConvention.Cdecl)]
         private static extern void mzEncryptUtil_encrypt(byte[] src, int nLength, int secretcode);
         /// <summary>
@@ -36,7 +38,7 @@ namespace MapZone.Core
             return src;
         }
 
-
+        //dylib是MacOS下的动态链接库扩展名，Linux下是so，Windows下是dll
         [DllImport("libc.dylib", CharSet = CharSet.Auto, CallingConvention = CallingConvention.Cdecl)]
         private static extern void mzEncryptUtil_decrypt_default(byte[] src, int nLength);
         /// <summary>
@@ -50,6 +52,7 @@ namespace MapZone.Core
             return src;
         }
 
+        //dylib是MacOS下的动态链接库扩展名，Linux下是so，Windows下是dll
         [DllImport("libc.dylib", CharSet = CharSet.Auto, CallingConvention = CallingConvention.Cdecl)]
         private static extern void mzEncryptUtil_decrypt(byte[] src, int nLength, int secretcode);
         /// <summary>
